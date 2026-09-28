@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GuamalOrigen.com — guía turística de Guamal, Meta. Naturaleza, gastronomía, alojamiento, cultura y mapa.">
+<title>GuamalOrigen.com | Guamal, Meta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#inicio" class="brand">🌿 <b>Guamal</b><span>Origen</span></a>
+  <button id="menuBtn">☰</button>
+  <nav id="navLinks">
+    <a href="#inicio">Inicio</a><a href="#lugares">Lugares</a><a href="#comer">Comer</a>
+    <a href="#hospedaje">Hospedaje</a><a href="#mapa">Mapa</a><a href="#proyecto">Proyecto</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-copy">
+    <span class="kicker">GUAMAL · META · COLOMBIA</span>
+    <h1>Guamal tiene historias que se viven.</h1>
+    <p>Una propuesta de portal para descubrir naturaleza, cultura, gastronomía y servicios turísticos del municipio.</p>
+    <div class="actions"><a class="btn main" href="#lugares">Explorar</a><a class="btn outline" href="#proyecto">Ver proyecto</a></div>
+  </div>
+</section>
+
+<section class="intro">
+  <div><span class="kicker green">GUAMALORIGEN.COM</span><h2>La información turística, reunida en un solo lugar.</h2></div>
+  <p>El proyecto nace para reducir la dispersión de información turística y facilitar que visitantes y habitantes encuentren datos organizados. La propuesta contempla atractivos, alojamiento, gastronomía y eventos.</p>
+</section>
+
+<section id="lugares" class="section">
+  <div class="title"><span class="kicker green">NATURALEZA</span><h2>Conoce algunos lugares</h2><p>Referencias iniciales encontradas en fuentes públicas. Antes de publicar información como oficial, conviene verificar horarios, accesos y condiciones con cada lugar.</p></div>
+  <div class="searchbar"><input id="search" placeholder="🔎 Buscar un lugar, categoría o palabra..."><select id="filter"><option value="all">Todas las categorías</option><option value="naturaleza">Naturaleza</option><option value="cultura">Cultura</option><option value="recreacion">Recreación</option></select></div>
+  <div id="placeGrid" class="grid">
+    <article class="place" data-cat="naturaleza" data-text="río humadea naturaleza agua">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/R%C3%ADo_Humadea_-_Meta_%28Colombia%29.jpg" alt="Río Humadea en Meta">
+      <div><small>NATURALEZA</small><h3>Río Humadea</h3><p>Uno de los referentes naturales de la zona. La imagen usada tiene licencia Creative Commons y se acredita abajo.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=R%C3%ADo+Humadea+Guamal+Meta">📍 Ver en mapa</a></div>
+    </article>
+    <article class="place" data-cat="naturaleza" data-text="pozo azul orotoy naturaleza">
+      <div class="photo gradient2">💧</div><div><small>NATURALEZA</small><h3>Pozo Azul</h3><p>Ubicado en el entorno del río Orotoy. Se incluye como referencia turística para ampliar y verificar en el trabajo de campo.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pozo+Azul+Guamal+Meta">📍 Ver en mapa</a></div>
+    </article>
+    <article class="place" data-cat="recreacion" data-text="taimaku parque recreación">
+      <div class="photo gradient3">🌴</div><div><small>RECREACIÓN</small><h3>Parque Taimaku</h3><p>Centro de recreo ubicado en la vía Acacías–Guamal. Los datos concretos deben confirmarse antes de publicarlos como guía oficial.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parque+Taimaku+Guamal+Meta">📍 Ver en mapa</a></div>
+    </article>
+    <article class="place" data-cat="cultura" data-text="parque principal cultura plaza">
+      <div class="photo gradient4">⛪</div><div><small>CULTURA</small><h3>Parque Principal de Guamal</h3><p>Espacio central del municipio, útil como punto de referencia para visitantes.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parque+Principal+Guamal+Meta">📍 Ver en mapa</a></div>
+    </article>
+    <article class="place" data-cat="naturaleza" data-text="cascada monserrate naturaleza">
+      <div class="photo gradient5">🌊</div><div><small>NATURALEZA</small><h3>Cascada Monserrate Bajo</h3><p>Atractivo turístico registrado públicamente en Guamal. Conviene verificar acceso y condiciones antes de una visita.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cascada+Monserrate+Bajo+Guamal+Meta">📍 Ver en mapa</a></div>
+    </article>
+    <article class="place" data-cat="naturaleza" data-text="puente humadea río naturaleza">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Puente_del_Humadea.jpg" alt="Puente del Humadea">
+      <div><small>NATURALEZA · PATRIMONIO LOCAL</small><h3>Puente del Humadea</h3><p>Puente sobre el río Humadea. Fotografía de Wikimedia Commons con licencia CC BY-SA 4.0.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Puente+del+Humadea+Guamal+Meta">📍 Ver en mapa</a></div>
+    </article>
+  </div>
+  <p id="empty" class="empty">No encontramos resultados con esa búsqueda.</p>
+</section>
+
+<section id="comer" class="dark section">
+  <div class="title"><span class="kicker">GASTRONOMÍA</span><h2>Lugares para comer</h2><p>Directorio inicial elaborado a partir de resultados públicos consultados. No constituye una clasificación.</p></div>
+  <div class="business-grid">
+    <div class="business"><span>🍖</span><div><h3>Parador Restaurante La Talanquera</h3><p>Restaurante · Guamal, Meta</p><a href="tel:+573118547153">📞 +57 311 854 7153</a></div></div>
+    <div class="business"><span>🍲</span><div><h3>Restaurante Popular de Guamal Meta</h3><p>Calle 11 #2-110, barrio El Centro</p><a href="tel:+573143712141">📞 +57 314 371 2141</a></div></div>
+    <div class="business"><span>🥘</span><div><h3>El Garcero</h3><p>Cra. 7 #11-66, Guamal</p><a href="tel:+573202267116">📞 +57 320 226 7116</a></div></div>
+    <div class="business"><span>🍽️</span><div><h3>Restaurante El Llanerito</h3><p>Vía Guamal–Castilla La Nueva</p><a href="tel:+573053003416">📞 +57 305 300 3416</a></div></div>
+  </div>
+</section>
+
+<section id="hospedaje" class="section light">
+  <div class="title"><span class="kicker green">ALOJAMIENTO</span><h2>Opciones para hospedarte</h2><p>Información pública consultada para el prototipo. Confirma disponibilidad, tarifas y condiciones directamente con el establecimiento.</p></div>
+  <div class="business-grid">
+    <div class="business white"><span>🏨</span><div><h3>Hotel Playa Maui</h3><p>Cl. 12, Guamal, Meta</p><a href="tel:+573108877941">📞 +57 310 887 7941</a></div></div>
+    <div class="business white"><span>🏡</span><div><h3>Finca Hotel Buenos Aires</h3><p>Vía Guamal–Castilla</p><a href="tel:+573144438885">📞 +57 314 443 8885</a></div></div>
+    <div class="business white"><span>🛏️</span><div><h3>Hotel Brisas Guamal</h3><p>Cra. 3ª #10-47, Guamal</p><a href="tel:+573103193299">📞 +57 310 319 3299</a></div></div>
+    <div class="business white"><span>🌿</span><div><h3>Hotel Guama 1uno</h3><p>Cl. 12 #9-15, Guamal</p><a href="tel:+573132665795">📞 +57 313 266 5795</a></div></div>
+  </div>
+</section>
+
+<section id="mapa" class="map-section">
+  <div class="map-copy"><span class="kicker green">UBICACIÓN</span><h2>Encuentra Guamal en el mapa</h2><p>Consulta la ubicación del municipio y utiliza los botones de cada lugar para abrir indicaciones en tu aplicación de mapas.</p><a class="btn main" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Guamal+Meta+Colombia">Abrir mapa</a></div>
+  <iframe title="Mapa de Guamal, Meta" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.82%2C3.83%2C-73.70%2C3.92&layer=mapnik&marker=3.88%2C-73.76"></iframe>
+</section>
+
+<section id="proyecto" class="project">
+  <div class="project-card"><span class="kicker green">PROYECTO DE INVESTIGACIÓN</span><h2>Una solución tecnológica construida desde la educación.</h2><p>GuamalOrigen.com busca diagnosticar la brecha de visibilidad digital del turismo en Guamal-Meta y diseñar un portal turístico como propuesta tecnológica basada en investigación.</p>
+  <div class="team"><div><b>Daniel Gonzalez Lozano</b><small>Ponente · 10-2</small></div><div><b>Danna Vanessa Torres Rodríguez</b><small>Ponente · 10-2</small></div><div><b>Breiner Alexis Franco Hoyos</b><small>10-2</small></div><div><b>Yisell Antonella Vásquez Castro</b><small>10-2</small></div><div><b>Samuel Estaban Trujillo Garzón</b><small>Líder de equipo · 11-2</small></div></div></div>
+</section>
+
+<section class="cta"><span class="kicker">GUAMALORIGEN</span><h2>Ayúdanos a completar el directorio.</h2><p>Si eres parte de un establecimiento turístico, la información debe verificarse antes de incorporarse como dato oficial del portal.</p><a class="btn main" href="mailto:guamalorigen@gmail.com">Contactar al proyecto</a></section>
+
+<footer><div><a href="#inicio" class="brand">🌿 <b>Guamal</b><span>Origen</span></a><p>Prototipo escolar · Guamal, Meta · 2026</p></div><p>Fotos: Wikimedia Commons · CC BY / CC BY-SA</p></footer>
+<script src="script.js"></script>
+</body></html>
