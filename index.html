@@ -1,100 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GuamalOrigen.com — guía turística de Guamal, Meta. Naturaleza, gastronomía, alojamiento, cultura y mapa.">
-<title>GuamalOrigen.com | Guamal, Meta</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GuamalOrigen: descubre la historia, la cultura, la naturaleza y el turismo de Guamal, Meta.">
+  <title>GuamalOrigen | Historia, cultura y naturaleza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="nav">
-  <a href="#inicio" class="brand">🌿 <b>Guamal</b><span>Origen</span></a>
-  <button id="menuBtn">☰</button>
-  <nav id="navLinks">
-    <a href="#inicio">Inicio</a><a href="#lugares">Lugares</a><a href="#comer">Comer</a>
-    <a href="#hospedaje">Hospedaje</a><a href="#mapa">Mapa</a><a href="#proyecto">Proyecto</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="GuamalOrigen, inicio">
+      <span class="brand-mark">G<span>O</span></span>
+      <span>Guamal<span class="brand-accent">Origen</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="mainNav" class="main-nav">
+      <a href="#historia">Historia</a>
+      <a href="#cultura">Cultura</a>
+      <a href="#turismo">Turismo</a>
+      <a href="#lugares">Lugares</a>
+      <a href="#cacao">Cacao</a>
+      <a href="#directorio">Directorio</a>
+      <a href="#cacao">Cacao</a>
+      <a href="#directorio">Directorio</a>
+      <a href="#proyecto">El proyecto</a>
+    </nav>
+    <a class="header-cta" href="#explorar">Explorar <span>↗</span></a>
+  </header>
 
-<section id="inicio" class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-copy">
-    <span class="kicker">GUAMAL · META · COLOMBIA</span>
-    <h1>Guamal tiene historias que se viven.</h1>
-    <p>Una propuesta de portal para descubrir naturaleza, cultura, gastronomía y servicios turísticos del municipio.</p>
-    <div class="actions"><a class="btn main" href="#lugares">Explorar</a><a class="btn outline" href="#proyecto">Ver proyecto</a></div>
-  </div>
-</section>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-image" role="img" aria-label="Paisaje natural de los Llanos Orientales"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> META · COLOMBIA</p>
+        <h1>Un lugar con<br><em>historia y raíz.</em></h1>
+        <p class="hero-copy">Descubre Guamal: su memoria, sus paisajes y las tradiciones que le dan identidad.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#explorar">Conoce Guamal <span>↓</span></a>
+          <a class="text-link" href="#proyecto">Conoce la investigación <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero-note"><span class="note-line"></span><span>Territorio · Cultura · Comunidad</span></div>
+      <div class="hero-number"><strong>01</strong><span> / 04</span></div>
+    </section>
 
-<section class="intro">
-  <div><span class="kicker green">GUAMALORIGEN.COM</span><h2>La información turística, reunida en un solo lugar.</h2></div>
-  <p>El proyecto nace para reducir la dispersión de información turística y facilitar que visitantes y habitantes encuentren datos organizados. La propuesta contempla atractivos, alojamiento, gastronomía y eventos.</p>
-</section>
+    <section class="intro section-wrap" id="explorar">
+      <div class="section-kicker">01 — BIENVENIDOS</div>
+      <div class="intro-grid">
+        <h2>Las raíces cuentan<br>quiénes <em>somos.</em></h2>
+        <div class="intro-text">
+          <p>Guamal, en el departamento del Meta, reúne paisajes del piedemonte llanero, vida rural y una identidad construida por generaciones. GuamalOrigen es una invitación a conocer y valorar ese patrimonio.</p>
+          <a class="underlined-link" href="#historia">Recorre nuestra historia <span>↗</span></a>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><span class="stat-icon">⌂</span><div><strong>Territorio</strong><small>Un municipio del Meta</small></div></div>
+        <div class="stat"><span class="stat-icon">✳</span><div><strong>Identidad</strong><small>Memoria y tradiciones</small></div></div>
+        <div class="stat"><span class="stat-icon">↟</span><div><strong>Naturaleza</strong><small>Paisajes por descubrir</small></div></div>
+      </div>
+    </section>
 
-<section id="lugares" class="section">
-  <div class="title"><span class="kicker green">NATURALEZA</span><h2>Conoce algunos lugares</h2><p>Referencias iniciales encontradas en fuentes públicas. Antes de publicar información como oficial, conviene verificar horarios, accesos y condiciones con cada lugar.</p></div>
-  <div class="searchbar"><input id="search" placeholder="🔎 Buscar un lugar, categoría o palabra..."><select id="filter"><option value="all">Todas las categorías</option><option value="naturaleza">Naturaleza</option><option value="cultura">Cultura</option><option value="recreacion">Recreación</option></select></div>
-  <div id="placeGrid" class="grid">
-    <article class="place" data-cat="naturaleza" data-text="río humadea naturaleza agua">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/R%C3%ADo_Humadea_-_Meta_%28Colombia%29.jpg" alt="Río Humadea en Meta">
-      <div><small>NATURALEZA</small><h3>Río Humadea</h3><p>Uno de los referentes naturales de la zona. La imagen usada tiene licencia Creative Commons y se acredita abajo.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=R%C3%ADo+Humadea+Guamal+Meta">📍 Ver en mapa</a></div>
-    </article>
-    <article class="place" data-cat="naturaleza" data-text="pozo azul orotoy naturaleza">
-      <div class="photo gradient2">💧</div><div><small>NATURALEZA</small><h3>Pozo Azul</h3><p>Ubicado en el entorno del río Orotoy. Se incluye como referencia turística para ampliar y verificar en el trabajo de campo.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pozo+Azul+Guamal+Meta">📍 Ver en mapa</a></div>
-    </article>
-    <article class="place" data-cat="recreacion" data-text="taimaku parque recreación">
-      <div class="photo gradient3">🌴</div><div><small>RECREACIÓN</small><h3>Parque Taimaku</h3><p>Centro de recreo ubicado en la vía Acacías–Guamal. Los datos concretos deben confirmarse antes de publicarlos como guía oficial.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parque+Taimaku+Guamal+Meta">📍 Ver en mapa</a></div>
-    </article>
-    <article class="place" data-cat="cultura" data-text="parque principal cultura plaza">
-      <div class="photo gradient4">⛪</div><div><small>CULTURA</small><h3>Parque Principal de Guamal</h3><p>Espacio central del municipio, útil como punto de referencia para visitantes.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parque+Principal+Guamal+Meta">📍 Ver en mapa</a></div>
-    </article>
-    <article class="place" data-cat="naturaleza" data-text="cascada monserrate naturaleza">
-      <div class="photo gradient5">🌊</div><div><small>NATURALEZA</small><h3>Cascada Monserrate Bajo</h3><p>Atractivo turístico registrado públicamente en Guamal. Conviene verificar acceso y condiciones antes de una visita.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cascada+Monserrate+Bajo+Guamal+Meta">📍 Ver en mapa</a></div>
-    </article>
-    <article class="place" data-cat="naturaleza" data-text="puente humadea río naturaleza">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Puente_del_Humadea.jpg" alt="Puente del Humadea">
-      <div><small>NATURALEZA · PATRIMONIO LOCAL</small><h3>Puente del Humadea</h3><p>Puente sobre el río Humadea. Fotografía de Wikimedia Commons con licencia CC BY-SA 4.0.</p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Puente+del+Humadea+Guamal+Meta">📍 Ver en mapa</a></div>
-    </article>
-  </div>
-  <p id="empty" class="empty">No encontramos resultados con esa búsqueda.</p>
-</section>
+    <section class="history-section" id="historia">
+      <div class="section-wrap history-grid">
+        <div class="history-copy">
+          <div class="section-kicker light-kicker">02 — NUESTRA HISTORIA</div>
+          <h2>Un nombre que<br>nace de la <em>tierra.</em></h2>
+          <p>Una explicación tradicional relaciona el nombre Guamal con la presencia de árboles de guama en el territorio. La historia local también está vinculada al poblamiento rural y al desarrollo agrícola de la región.</p>
+          <p>El 19 de noviembre de 1957 se reconoce como una fecha clave en la historia municipal. Investigar estos relatos ayuda a preservar la memoria de la comunidad.</p>
+          <a class="button button-outline" href="#proyecto">Cómo investigamos <span>↗</span></a>
+        </div>
+        <div class="history-photo">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1100&q=85" alt="Paisaje de montañas y agua, imagen ilustrativa">
+          <div class="photo-caption"><span>MEMORIA VIVA</span><span>GUAMAL · META</span></div>
+        </div>
+      </div>
+    </section>
 
-<section id="comer" class="dark section">
-  <div class="title"><span class="kicker">GASTRONOMÍA</span><h2>Lugares para comer</h2><p>Directorio inicial elaborado a partir de resultados públicos consultados. No constituye una clasificación.</p></div>
-  <div class="business-grid">
-    <div class="business"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80" alt="Gastronomía"><div><h3>Parador Restaurante La Talanquera</h3><p>Restaurante · Guamal, Meta</p><a href="tel:+573118547153">📞 +57 311 854 7153</a></div></div>
-    <div class="business"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Comida"><div><h3>Restaurante Popular de Guamal Meta</h3><p>Calle 11 #2-110, barrio El Centro</p><a href="tel:+573143712141">📞 +57 314 371 2141</a></div></div>
-    <div class="business"><img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=500&q=80" alt="Plato de comida"><div><h3>El Garcero</h3><p>Cra. 7 #11-66, Guamal</p><a href="tel:+573202267116">📞 +57 320 226 7116</a></div></div>
-    <div class="business"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Restaurante"><div><h3>Restaurante El Llanerito</h3><p>Vía Guamal–Castilla La Nueva</p><a href="tel:+573053003416">📞 +57 305 300 3416</a></div></div>
-  </div>
-</section>
+    <section class="culture section-wrap" id="cultura">
+      <div class="section-kicker">03 — IDENTIDAD CULTURAL</div>
+      <div class="section-heading">
+        <h2>Tradiciones que<br><em>nos conectan.</em></h2>
+        <p>La identidad de un territorio se expresa en sus costumbres, sus sabores, su trabajo y las historias que comparte la gente.</p>
+      </div>
+      <div class="culture-cards">
+        <article class="culture-card card-green">
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Campo verde y paisaje rural ilustrativo"></div>
+          <div class="card-content"><span class="card-tag">01 / TERRITORIO</span><h3>Vida campesina</h3><p>El trabajo de la tierra y las actividades rurales hacen parte de la historia productiva de la región.</p></div>
+        </article>
+        <article class="culture-card card-yellow">
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=900&q=85" alt="Comida servida, imagen ilustrativa"></div>
+          <div class="card-content"><span class="card-tag">02 / SABORES</span><h3>Gastronomía</h3><p>Los sabores locales cuentan historias de familia, encuentros y costumbres compartidas.</p></div>
+        </article>
+        <article class="culture-card card-pink">
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Persona recorriendo un paisaje natural ilustrativo"></div>
+          <div class="card-content"><span class="card-tag">03 / COMUNIDAD</span><h3>Tradición llanera</h3><p>La música, los relatos y las celebraciones fortalecen el sentido de pertenencia.</p></div>
+        </article>
+      </div>
+      <p class="image-note">Nota: algunas fotografías son ilustrativas y deben reemplazarse por imágenes propias o verificadas de Guamal.</p>
+    </section>
 
-<section id="hospedaje" class="section light">
-  <div class="title"><span class="kicker green">ALOJAMIENTO</span><h2>Opciones para hospedarte</h2><p>Información pública consultada para el prototipo. Confirma disponibilidad, tarifas y condiciones directamente con el establecimiento.</p></div>
-  <div class="business-grid">
-    <div class="business white"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80" alt="Hotel"><div><h3>Hotel Playa Maui</h3><p>Cl. 12, Guamal, Meta</p><a href="tel:+573108877941">📞 +57 310 887 7941</a></div></div>
-    <div class="business white"><img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=500&q=80" alt="Alojamiento rural"><div><h3>Finca Hotel Buenos Aires</h3><p>Vía Guamal–Castilla</p><a href="tel:+573144438885">📞 +57 314 443 8885</a></div></div>
-    <div class="business white"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80" alt="Habitación de hotel"><div><h3>Hotel Brisas Guamal</h3><p>Cra. 3ª #10-47, Guamal</p><a href="tel:+573103193299">📞 +57 310 319 3299</a></div></div>
-    <div class="business white"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=500&q=80" alt="Hotel"><div><h3>Hotel Guama 1uno</h3><p>Cl. 12 #9-15, Guamal</p><a href="tel:+573132665795">📞 +57 313 266 5795</a></div></div>
-  </div>
-</section>
+    <section class="tourism-section" id="turismo">
+      <div class="tourism-bg"></div>
+      <div class="tourism-content section-wrap">
+        <div class="section-kicker light-kicker">04 — NATURALEZA Y TURISMO</div>
+        <h2>Hay mucho por<br><em>descubrir.</em></h2>
+        <p>Los paisajes, los ríos y los espacios rurales hacen parte del potencial natural de Guamal. Conocerlos también implica respetar el entorno y cuidar los recursos que compartimos.</p>
+        <a class="button button-light" href="https://turismoguamalmeta.com/" target="_blank" rel="noopener noreferrer">Explorar guía turística <span>↗</span></a>
+      </div>
+    </section>
 
-<section id="mapa" class="map-section">
-  <div class="map-copy"><span class="kicker green">UBICACIÓN</span><h2>Encuentra Guamal en el mapa</h2><p>Consulta la ubicación del municipio y utiliza los botones de cada lugar para abrir indicaciones en tu aplicación de mapas.</p><a class="btn main" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Guamal+Meta+Colombia">Abrir mapa</a></div>
-  <iframe title="Mapa de Guamal, Meta" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.82%2C3.83%2C-73.70%2C3.92&layer=mapnik&marker=3.88%2C-73.76"></iframe>
-</section>
+    <section class="local-places section-wrap" id="lugares">
+      <div class="section-kicker">05 — LUGARES PARA CONOCER</div>
+      <div class="section-heading">
+        <h2>Guamal se vive<br><em>en sus paisajes.</em></h2>
+        <p>Estos lugares aparecen en directorios turísticos consultados. Antes de viajar, confirma condiciones de acceso, clima, horarios y recomendaciones locales.</p>
+      </div>
+      <div class="place-grid">
+        <article class="place-card">
+          <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=85" alt="Cascada y vegetación, imagen de referencia; no es una fotografía confirmada de Humadea">
+          <div class="place-copy"><span class="card-tag">NATURALEZA</span><h3>Río y malecón de Humadea</h3><p>Sector natural conocido de Guamal, con paisaje ribereño y vegetación. Visita con precaución, respeta las señales y no te acerques a zonas de corriente fuerte.</p><a href="https://www.google.com/maps/search/?api=1&query=R%C3%ADo+Humadea+Guamal+Meta" target="_blank" rel="noopener noreferrer" class="underlined-link">Ver ubicación ↗</a></div>
+        </article>
+        <article class="place-card">
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85" alt="Agua de río, imagen de referencia; no es una fotografía confirmada de Pozo Azul">
+          <div class="place-copy"><span class="card-tag">BAÑO NATURAL</span><h3>Pozo Azul — río Orotoy</h3><p>Balneario natural ubicado en el sector del río Orotoy, vereda Santa Bárbara. Comprueba el estado del río y evita saltos o zonas profundas desconocidas.</p><a href="https://www.google.com/maps/search/?api=1&query=Pozo+Azul+Rio+Orotoy+Guamal+Meta" target="_blank" rel="noopener noreferrer" class="underlined-link">Ver ubicación ↗</a></div>
+        </article>
+        <article class="place-card">
+          <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85" alt="Arquitectura urbana, imagen de referencia; no es una fotografía confirmada de la plaza de Guamal">
+          <div class="place-copy"><span class="card-tag">CASCO URBANO</span><h3>Centro de Guamal</h3><p>Recorre el área central para conocer el comercio local, los espacios de encuentro y los servicios del municipio. Pregunta a residentes por sitios culturales y eventos vigentes.</p><a href="https://www.google.com/maps/search/?api=1&query=Centro+de+Guamal+Meta" target="_blank" rel="noopener noreferrer" class="underlined-link">Ver ubicación ↗</a></div>
+        </article>
+      </div>
+      <p class="image-note">Importante: las fotos de esta sección son ilustrativas, no registros fotográficos confirmados de los lugares nombrados. Se deben sustituir por fotos locales autorizadas para que la web muestre imágenes auténticas.</p>
+    </section>
 
-<section id="proyecto" class="project">
-  <div class="project-card"><span class="kicker green">PROYECTO DE INVESTIGACIÓN</span><h2>Una solución tecnológica construida desde la educación.</h2><p>GuamalOrigen.com busca diagnosticar la brecha de visibilidad digital del turismo en Guamal-Meta y diseñar un portal turístico como propuesta tecnológica basada en investigación.</p>
-  <div class="project-highlights">
-<div><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80" alt="Paisaje natural"><b>Investigación</b><span>Diagnóstico de la visibilidad turística.</span></div>
-<div><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Actividad cultural"><b>Cultura</b><span>Visibilización de experiencias locales.</span></div>
-<div><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Gastronomía"><b>Turismo</b><span>Información organizada para visitantes.</span></div>
-</div></div>
-</section>
-<section class="cta"><span class="kicker">GUAMALORIGEN</span><h2>Ayúdanos a completar el directorio.</h2><p>Si eres parte de un establecimiento turístico, la información debe verificarse antes de incorporarse como dato oficial del portal.</p><a class="btn main" href="mailto:guamalorigen@gmail.com">Contactar al proyecto</a></section>
+    <section class="cacao-section" id="cacao">
+      <div class="cacao-grid section-wrap">
+        <div class="cacao-photo"><img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1000&q=85" alt="Chocolate y cacao, fotografía temática ilustrativa"></div>
+        <div class="cacao-copy"><div class="section-kicker">06 — CACAO Y CAMPO</div><h2>Del cultivo<br><em>a la taza.</em></h2><p>Guamal tiene vocación cacaotera y forma parte de iniciativas regionales para fortalecer la producción, transformación y turismo rural alrededor del cacao.</p><p>La cadena del cacao incluye el cuidado de las plantas, la cosecha de mazorcas, la fermentación y el secado del grano, y su transformación en chocolate y otros productos.</p><div class="cacao-highlight"><strong>Workakao</strong><span>El inventario turístico departamental describe esta cooperativa de Guamal como una organización de familias cacaoteras que transforma el grano en chocolates artesanales.</span></div><a href="https://www.turismometa.gov.co/el-meta/mapas/doc_download/1545-anexo-12-2-inventario-turistico-de-cafe-y-cacao-del-meta.html" target="_blank" rel="noopener noreferrer" class="underlined-link">Consultar inventario de la Ruta del Cacao ↗</a></div>
+      </div>
+    </section>
 
-<footer><div><a href="#inicio" class="brand">🌿 <b>Guamal</b><span>Origen</span></a><p>Prototipo escolar · Guamal, Meta · 2026</p></div><p>Imágenes: Wikimedia Commons y Unsplash. Revisa las licencias antes de usar fotos fuera de este prototipo.</p></footer>
-<script src="script.js"></script>
-</body></html>
+    <section class="directory section-wrap" id="directorio">
+      <div class="section-kicker">07 — DIRECTORIO LOCAL</div>
+      <div class="section-heading"><h2>Servicios para<br><em>tu visita.</em></h2><p>Datos publicados en directorios y fichas comerciales consultados. No representan una certificación oficial: confirma por teléfono la dirección, el servicio y la disponibilidad antes de desplazarte.</p></div>
+      <h3 class="directory-label">Alojamiento</h3>
+      <div class="directory-grid">
+        <article class="directory-card"><h3>Hotel Guamaluno</h3><p>Calle 12 #9-19, Guamal, Meta.</p><p><strong>Tel.:</strong> +57 313 266 5795</p><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Guamaluno+Guamal+Meta" target="_blank" rel="noopener noreferrer">Ver mapa ↗</a></article>
+        <article class="directory-card"><h3>Hotel Río Humadea</h3><p>Sector Humadea, vía Guamal–San Martín.</p><p><strong>Tel.:</strong> +57 301 724 3479</p><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Rio+Humadea+Guamal+Meta" target="_blank" rel="noopener noreferrer">Ver mapa ↗</a></article>
+        <article class="directory-card"><h3>Finca Hotel Buenos Aires</h3><p>Vía Guamal–Castilla La Nueva, sector rural.</p><p><strong>Tel.:</strong> +57 314 443 8885</p><a href="https://www.google.com/maps/search/?api=1&query=Finca+Hotel+Buenos+Aires+Guamal+Meta" target="_blank" rel="noopener noreferrer">Ver mapa ↗</a></article>
+      </div>
+      <h3 class="directory-label">Restaurantes</h3>
+      <div class="directory-grid">
+        <article class="directory-card"><h3>El Garcero</h3><p>Cra. 7 #11-66, Guamal. Ofrece opciones de comidas, bebidas y heladería según su ficha comercial.</p><p><strong>Tel.:</strong> +57 320 226 7116</p><a href="https://www.google.com/maps/search/?api=1&query=El+Garcero+Guamal+Meta" target="_blank" rel="noopener noreferrer">Ver mapa ↗</a></article>
+        <article class="directory-card"><h3>Restaurante Popular de Guamal</h3><p>Calle 11 #2-110, barrio El Centro.</p><p><strong>Tel.:</strong> +57 314 371 2141</p><a href="https://www.google.com/maps/search/?api=1&query=Restaurante+Popular+Guamal+Meta" target="_blank" rel="noopener noreferrer">Ver mapa ↗</a></article>
+        <article class="directory-card"><h3>Parador La Talanquera</h3><p>Parador de carretera conocido por su oferta de comida tradicional llanera; confirma el punto exacto antes de ir.</p><p><strong>Tel.:</strong> +57 311 854 7153</p><a href="https://www.google.com/maps/search/?api=1&query=Parador+La+Talanquera+Guamal+Meta" target="_blank" rel="noopener noreferrer">Ver mapa ↗</a></article>
+      </div>
+      <p class="image-note">Los teléfonos y direcciones pueden cambiar. Verifica los datos directamente con el negocio y solicita autorización antes de publicar información adicional o fotografías.</p>
+      <a class="button button-dark" href="https://turismoguamalmeta.com/" target="_blank" rel="noopener noreferrer">Abrir directorio turístico de Guamal ↗</a>
+    </section>
+
+    <section class="project section-wrap" id="proyecto">
+      <div class="project-side">
+        <div class="section-kicker">08 — SEMILLERO DE INVESTIGACIÓN</div>
+        <h2>Conocer para<br><em>preservar.</em></h2>
+        <p>GuamalOrigen busca reunir y compartir información sobre el origen, la historia y los atractivos culturales y naturales del municipio.</p>
+      </div>
+      <div class="project-details">
+        <div class="detail-item"><span class="detail-number">01</span><div><h3>Objetivo</h3><p>Investigar y divulgar aspectos de la identidad histórica, cultural y turística de Guamal, Meta.</p></div></div>
+        <div class="detail-item"><span class="detail-number">02</span><div><h3>¿Cómo lo hacemos?</h3><p>Consultando fuentes confiables, recogiendo testimonios con autorización y organizando la información de manera clara.</p></div></div>
+        <div class="detail-item"><span class="detail-number">03</span><div><h3>Resultado esperado</h3><p>Un recurso digital educativo que motive a estudiantes y visitantes a conocer y valorar el municipio.</p></div></div>
+        <div class="project-callout"><span>✳</span><p><strong>Tu memoria también cuenta.</strong><br>¿Tienes una historia o dato sobre Guamal? Compártelo con el equipo del proyecto en persona, en el colegio.</p></div>
+      </div>
+    </section>
+
+    <section class="sources section-wrap">
+      <div><div class="section-kicker">FUENTES PARA PROFUNDIZAR</div><h2>Investigar también es<br><em>verificar.</em></h2></div>
+      <div class="source-links">
+        <a href="https://turismoguamalmeta.com/" target="_blank" rel="noopener noreferrer"><span>Directorio turístico de Guamal</span><b>↗</b></a>
+        <a href="https://meta.gov.co/" target="_blank" rel="noopener noreferrer"><span>Gobernación del Meta</span><b>↗</b></a>
+        <a href="https://www.ant.gov.co/" target="_blank" rel="noopener noreferrer"><span>Agencia Nacional de Tierras</span><b>↗</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">G<span>O</span></span><span>Guamal<span class="brand-accent">Origen</span></span></a>
+    <p>Un proyecto educativo para conocer, valorar y compartir la identidad de Guamal, Meta.</p>
+    <a href="#inicio" class="back-top">Volver arriba ↑</a>
+    <small>© <span id="year"></span> GuamalOrigen · Proyecto escolar</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

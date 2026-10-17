@@ -1,3 +1,18 @@
-const nav=document.querySelector('.nav'),btn=document.getElementById('menuBtn');btn.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-const input=document.getElementById('search'),filter=document.getElementById('filter'),cards=[...document.querySelectorAll('.place')],empty=document.getElementById('empty');
-function apply(){const q=input.value.toLowerCase().trim(),cat=filter.value;let visible=0;cards.forEach(c=>{const ok=(cat==='all'||c.dataset.cat===cat)&&c.dataset.text.includes(q);c.style.display=ok?'block':'none';if(ok)visible++});empty.style.display=visible?'none':'block'}input.addEventListener('input',apply);filter.addEventListener('change',apply);
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = mainNav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+mainNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
