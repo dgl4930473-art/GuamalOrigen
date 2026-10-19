@@ -183,3 +183,23 @@ h2 em { color: var(--green); }
   .place-card img { height: 210px; }
   .cacao-photo img { height: 270px; }
 }
+
+
+/* Nuevas secciones: eventos, guía de visita y contactos oficiales */
+.official-info, .visit-guide, .official-contacts { padding-top: 95px; padding-bottom: 95px; }
+.info-grid, .guide-grid, .contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 36px; }
+.info-card, .guide-card, .contact-card { background: #fff; border: 1px solid rgba(30,60,42,.12); border-radius: 20px; padding: 26px; }
+.info-number, .contact-label { color: #477c42; font-size: 10px; letter-spacing: 1.5px; font-weight: 700; }
+.info-card h3, .guide-card h3, .contact-card h3 { font-family: var(--serif); font-size: 24px; line-height: 1.2; margin: 15px 0 12px; }
+.info-card p, .guide-card p, .contact-card p { color: #69756c; line-height: 1.75; font-size: 13px; }
+.info-card .underlined-link, .guide-card .underlined-link { display: inline-block; margin-top: 10px; }
+.guide-grid { grid-template-columns: 1.1fr .9fr; }
+.guide-icon { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: #e6efd9; color: #1d5038; font-size: 24px; }
+.guide-card ul { padding-left: 20px; color: #69756c; font-size: 13px; line-height: 1.9; }
+.guide-card li { padding-left: 3px; margin-bottom: 5px; }
+.guide-card .underlined-link { display: block; width: fit-content; margin-bottom: 8px; }
+.contact-grid { grid-template-columns: 1.15fr 1fr 1fr; }
+.contact-card a:not(.button) { color: #477c42; font-weight: 700; overflow-wrap: anywhere; }
+.contact-main { background: #e9eddf; }
+.contact-note { font-size: 11px !important; }
+@media (max-width: 760px) { .info-grid, .guide-grid, .contact-grid { grid-template-columns: 1fr; } .official-info, .visit-guide, .official-contacts { padding-top: 70px; padding-bottom: 70px; } .info-card, .guide-card, .contact-card { padding: 23px; } }
